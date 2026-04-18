@@ -26,6 +26,8 @@ import {
   SiGit,
   SiLinux,
   SiDocker,
+  SiNvidia,
+  SiUbuntu,
 } from 'react-icons/si'
 import {
   FiServer,
@@ -125,6 +127,9 @@ const skillCategories: SkillCategory[] = [
       { name: 'Plesk', icon: FiCloud, color: '#52BBE6' },
       { name: 'GCP', icon: SiGooglecloud, color: '#4285F4' },
       { name: 'Docker', icon: SiDocker, color: '#2496ED' },
+      { name: 'Ubuntu', icon: SiUbuntu, color: '#E95420' },
+      { name: 'NVIDIA', icon: SiNvidia, color: '#76B900' },
+      { name: 'CUDA', icon: SiNvidia, color: '#76B900' },
     ],
   },
   {

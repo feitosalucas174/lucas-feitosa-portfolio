@@ -1,26 +1,26 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { FiCode, FiSmartphone, FiCpu, FiLayout } from 'react-icons/fi'
+import { FiCode, FiSmartphone, FiCpu, FiCalendar } from 'react-icons/fi'
 
 // Estatísticas exibidas nos cards
 const stats = [
   {
-    value: '5+',
-    label: 'Tecnologias Backend',
+    value: '4+',
+    label: 'Anos de Experiência',
+    icon: FiCalendar,
+    gradient: 'from-blue-500 to-blue-700',
+    shadow: 'shadow-blue-500/20',
+  },
+  {
+    value: '10+',
+    label: 'Tecnologias Dominadas',
     icon: FiCode,
     gradient: 'from-blue-500 to-blue-700',
     shadow: 'shadow-blue-500/20',
   },
   {
-    value: '4+',
-    label: 'Tecnologias Frontend',
-    icon: FiLayout,
-    gradient: 'from-blue-500 to-blue-700',
-    shadow: 'shadow-blue-500/20',
-  },
-  {
-    value: '1',
+    value: '✓',
     label: 'App Mobile',
     icon: FiSmartphone,
     gradient: 'from-blue-400 to-blue-600',
@@ -88,19 +88,19 @@ export default function About() {
           >
             <p className="text-white/70 text-lg leading-relaxed mb-5">
               Sou um desenvolvedor{' '}
-              <strong className="text-white font-semibold">Full-Stack e Mobile</strong>,
-              apaixonado por transformar ideias complexas em soluções digitais
-              elegantes e funcionais. Trabalho com um amplo ecossistema de
-              tecnologias modernas.
+              <strong className="text-white font-semibold">Full-Stack e Mobile</strong>{' '}
+              com mais de 4 anos de experiência, desde 2021, apaixonado por transformar
+              ideias complexas em soluções digitais elegantes e funcionais.
             </p>
             <p className="text-white/70 text-lg leading-relaxed mb-5">
               Tenho experiência em desenvolvimento web, criação de{' '}
               <strong className="text-white font-semibold">APIs robustas</strong>,
-              aplicativos mobile com Flutter e{' '}
+              aplicativos mobile com Flutter,{' '}
               <strong className="text-blue-400 font-semibold">
                 integração com Inteligência Artificial
-              </strong>
-              , incluindo modelos de linguagem (LLMs) e automação inteligente.
+              </strong>{' '}
+              e programação GPU com{' '}
+              <strong className="text-white font-semibold">NVIDIA CUDA</strong>.
             </p>
             <p className="text-white/70 text-lg leading-relaxed mb-8">
               🚀 Estou disponível para projetos{' '}
