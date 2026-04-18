@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================
+   ESTILOS GLOBAIS - Portfólio Lucas Feitosa
+   ============================================ */
+
+:root {
+  --color-primary: #3b82f6;
+  --color-secondary: #2563eb;
+  --color-bg: #0a0a0a;
+}
+
+/* Scroll suave em toda a página */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Scrollbar personalizada */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3b82f6;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2563eb;
+}
+
+/* Seleção de texto */
+::selection {
+  background: rgba(59,130,246, 0.3);
+  color: #ffffff;
+}
+
+/* Foco acessível */
+:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Animação do cursor typewriter */
+@keyframes blink-cursor {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.typewriter-cursor {
+  animation: blink-cursor 1s step-end infinite;
+}
+
+/* Utilitários personalizados */
+@layer utilities {
+  /* Grade de fundo */
+  .bg-grid {
+    background-image: linear-gradient(rgba(59,130,246, 0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(59,130,246, 0.06) 1px, transparent 1px);
+    background-size: 64px 64px;
+  }
+
+  /* Texto com gradiente */
+  .text-gradient {
+    background: linear-gradient(135deg, #3b82f6, #2563eb, #60a5fa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Borda com gradiente */
+  .border-gradient {
+    border: 1px solid transparent;
+    background: linear-gradient(#111111, #111111) padding-box,
+      linear-gradient(135deg, #3b82f6, #2563eb) border-box;
+  }
+
+  /* Efeito glassmorphism */
+  .glass {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+  }
+}
