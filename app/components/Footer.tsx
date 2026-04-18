@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { FiGithub, FiLinkedin, FiMail, FiArrowUp } from 'react-icons/fi'
+import { FiGithub, FiLinkedin, FiInstagram, FiMail, FiArrowUp } from 'react-icons/fi'
 
 // Links de navegação rápida
 const quickLinks = [
@@ -24,6 +24,11 @@ const socialLinks = [
     label: 'LinkedIn',
     href: 'https://www.linkedin.com/in/lucas-feitosa-5b0932362',
     icon: FiLinkedin,
+  },
+  {
+    label: 'Instagram',
+    href: 'https://www.instagram.com/lucas.feitosa121/',
+    icon: FiInstagram,
   },
   {
     label: 'E-mail',
@@ -74,7 +79,7 @@ export default function Footer() {
               <a
                 key={s.label}
                 href={s.href}
-                target={s.label !== 'E-mail' ? '_blank' : undefined}
+                target={s.href.startsWith('mailto:') ? undefined : '_blank'}
                 rel="noopener noreferrer"
                 aria-label={s.label}
                 className="group flex items-center gap-2 px-4 py-2.5 rounded-xl border border-white/8 text-white/45 text-sm hover:text-white hover:border-blue-500/30 hover:bg-blue-500/5 transition-all duration-200"

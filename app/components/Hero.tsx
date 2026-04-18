@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
-import { FiGithub, FiLinkedin, FiArrowDown } from 'react-icons/fi'
+import { FiGithub, FiLinkedin, FiInstagram, FiArrowDown } from 'react-icons/fi'
 import NeuralBackground from './NeuralBackground'
 
 // Textos alternados no efeito typewriter
@@ -195,7 +195,6 @@ export default function Hero() {
           <div className="w-px h-5 bg-white/15" />
 
           {/* LinkedIn */}
-          {/* TODO: Substituir pelo link real do LinkedIn se necessário */}
           <a
             href="https://www.linkedin.com/in/lucas-feitosa-5b0932362"
             target="_blank"
@@ -208,6 +207,23 @@ export default function Hero() {
               className="group-hover:scale-110 transition-transform duration-200"
             />
             <span className="text-sm font-medium">LinkedIn</span>
+          </a>
+
+          <div className="w-px h-5 bg-white/15" />
+
+          {/* Instagram */}
+          <a
+            href="https://www.instagram.com/lucas.feitosa121/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group flex items-center gap-2.5 text-white/40 hover:text-white transition-colors duration-200"
+            aria-label="Instagram de Lucas Feitosa"
+          >
+            <FiInstagram
+              size={22}
+              className="group-hover:scale-110 transition-transform duration-200"
+            />
+            <span className="text-sm font-medium">Instagram</span>
           </a>
         </motion.div>
       </div>

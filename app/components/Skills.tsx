@@ -29,6 +29,8 @@ import {
   FiCloud,
   FiCpu,
 } from 'react-icons/fi'
+import { FaJava } from 'react-icons/fa'
+import { SiDotnet, SiKotlin } from 'react-icons/si'
 import { IconType } from 'react-icons'
 
 // Tipagem para cada habilidade
@@ -62,6 +64,9 @@ const skillCategories: SkillCategory[] = [
       { name: 'Django', icon: SiDjango, color: '#44B78B' },
       { name: 'Flask', icon: SiFlask, color: '#FFFFFF' },
       { name: 'Node.js', icon: SiNodedotjs, color: '#339933' },
+      { name: 'Java', icon: FaJava, color: '#ED8B00' },
+      { name: 'C#', icon: SiDotnet, color: '#512BD4' },
+      { name: 'Kotlin', icon: SiKotlin, color: '#7F52FF' },
     ],
   },
   {

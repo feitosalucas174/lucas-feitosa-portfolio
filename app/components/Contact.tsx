@@ -2,7 +2,7 @@
 
 import { useState, FormEvent } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { FiSend, FiGithub, FiLinkedin, FiCheckCircle, FiAlertCircle } from 'react-icons/fi'
+import { FiSend, FiGithub, FiLinkedin, FiInstagram, FiCheckCircle, FiAlertCircle } from 'react-icons/fi'
 
 // Tipagem do formulário
 type FormData = {
@@ -412,6 +412,22 @@ export default function Contact() {
                 className="group-hover:scale-110 transition-transform"
               />
               <span className="text-sm">LinkedIn</span>
+            </a>
+
+            <div className="w-px h-4 bg-white/15" />
+
+            <a
+              href="https://www.instagram.com/lucas.feitosa121/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center gap-2 text-white/40 hover:text-white transition-colors"
+              aria-label="Instagram"
+            >
+              <FiInstagram
+                size={20}
+                className="group-hover:scale-110 transition-transform"
+              />
+              <span className="text-sm">Instagram</span>
             </a>
           </motion.div>
         </motion.div>
