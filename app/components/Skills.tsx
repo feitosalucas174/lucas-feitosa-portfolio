@@ -20,6 +20,12 @@ import {
   SiGooglecloud,
   SiHtml5,
   SiCss,
+  SiPostman,
+  SiInsomnia,
+  SiGnubash,
+  SiGit,
+  SiLinux,
+  SiDocker,
 } from 'react-icons/si'
 import {
   FiServer,
@@ -28,6 +34,8 @@ import {
   FiDatabase,
   FiCloud,
   FiCpu,
+  FiTool,
+  FiTerminal,
 } from 'react-icons/fi'
 import { FaJava } from 'react-icons/fa'
 import { SiDotnet, SiKotlin } from 'react-icons/si'
@@ -116,6 +124,7 @@ const skillCategories: SkillCategory[] = [
     skills: [
       { name: 'Plesk', icon: FiCloud, color: '#52BBE6' },
       { name: 'GCP', icon: SiGooglecloud, color: '#4285F4' },
+      { name: 'Docker', icon: SiDocker, color: '#2496ED' },
     ],
   },
   {
@@ -127,7 +136,21 @@ const skillCategories: SkillCategory[] = [
     skills: [
       { name: 'LLMs', icon: SiOpenai, color: '#FFFFFF' },
       { name: 'REST APIs', icon: FiServer, color: '#3b82f6' },
-      // TODO: Adicionar mais integrações de IA conforme projetos forem desenvolvidos
+    ],
+  },
+  {
+    title: 'Ferramentas',
+    description: 'Testes de API, automação e utilitários do dia a dia',
+    categoryIcon: FiTool,
+    accentColor: 'from-violet-500 to-purple-700',
+    borderColor: 'hover:border-violet-500/30',
+    skills: [
+      { name: 'Git', icon: SiGit, color: '#F05032' },
+      { name: 'Linux', icon: SiLinux, color: '#FCC624' },
+      { name: 'PowerShell', icon: FiTerminal, color: '#5391FE' },
+      { name: 'Bash/Shell', icon: SiGnubash, color: '#4EAA25' },
+      { name: 'Postman', icon: SiPostman, color: '#FF6C37' },
+      { name: 'Insomnia', icon: SiInsomnia, color: '#4000BF' },
     ],
   },
 ]
