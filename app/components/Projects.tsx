@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { FiGithub, FiExternalLink, FiClock } from 'react-icons/fi'
+import { FiGithub, FiExternalLink, FiClock, FiCheckCircle } from 'react-icons/fi'
 
 // Tipagem para cada projeto
 type Project = {
@@ -29,9 +29,9 @@ const projects: Project[] = [
     gradient: 'from-blue-900/80 to-blue-700/80',
     iconBg: 'from-blue-800 to-blue-600',
     icon: '🤖',
-    githubUrl: '#',
-    demoUrl: '#',
-    status: 'Em breve',
+    githubUrl: 'https://github.com/feitosalucas174/chatbot-ia',
+    demoUrl: 'https://chatbot-ia-mkmw.onrender.com',
+    status: 'Concluído',
   },
   {
     id: 2,
@@ -168,8 +168,15 @@ export default function Projects() {
                 </div>
 
                 {/* Badge de status */}
-                <div className="absolute top-3 right-3 flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-black/40 backdrop-blur-sm border border-white/10 text-xs text-white/70">
-                  <FiClock size={10} />
+                <div className={`absolute top-3 right-3 flex items-center gap-1.5 px-2.5 py-1 rounded-full backdrop-blur-sm border text-xs ${
+                  project.status === 'Concluído'
+                    ? 'bg-green-500/20 border-green-500/30 text-green-300'
+                    : 'bg-black/40 border-white/10 text-white/70'
+                }`}>
+                  {project.status === 'Concluído'
+                    ? <FiCheckCircle size={10} />
+                    : <FiClock size={10} />
+                  }
                   {project.status}
                 </div>
               </div>
