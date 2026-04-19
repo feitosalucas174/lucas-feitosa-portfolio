@@ -379,56 +379,48 @@ export default function Contact() {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="flex items-center justify-center gap-6 mt-8"
+            className="flex flex-col items-center gap-4 mt-8"
           >
             <span className="text-white/30 text-sm">ou me encontre em</span>
 
-            {/* TODO: Substituir pelos links reais se necessário */}
-            <a
-              href="https://github.com/feitosalucas174"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group flex items-center gap-2 text-white/40 hover:text-white transition-colors"
-              aria-label="GitHub"
-            >
-              <FiGithub
-                size={20}
-                className="group-hover:scale-110 transition-transform"
-              />
-              <span className="text-sm">GitHub</span>
-            </a>
+            <div className="flex flex-wrap items-center justify-center gap-4">
+              <a
+                href="https://github.com/feitosalucas174"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center gap-2 text-white/40 hover:text-white transition-colors"
+                aria-label="GitHub"
+              >
+                <FiGithub size={20} className="group-hover:scale-110 transition-transform" />
+                <span className="text-sm">GitHub</span>
+              </a>
 
-            <div className="w-px h-4 bg-white/15" />
+              <div className="w-px h-4 bg-white/15 hidden sm:block" />
 
-            <a
-              href="https://www.linkedin.com/in/lucas-feitosa-5b0932362"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group flex items-center gap-2 text-white/40 hover:text-white transition-colors"
-              aria-label="LinkedIn"
-            >
-              <FiLinkedin
-                size={20}
-                className="group-hover:scale-110 transition-transform"
-              />
-              <span className="text-sm">LinkedIn</span>
-            </a>
+              <a
+                href="https://www.linkedin.com/in/lucas-feitosa-5b0932362"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center gap-2 text-white/40 hover:text-white transition-colors"
+                aria-label="LinkedIn"
+              >
+                <FiLinkedin size={20} className="group-hover:scale-110 transition-transform" />
+                <span className="text-sm">LinkedIn</span>
+              </a>
 
-            <div className="w-px h-4 bg-white/15" />
+              <div className="w-px h-4 bg-white/15 hidden sm:block" />
 
-            <a
-              href="https://www.instagram.com/lucas.feitosa121/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group flex items-center gap-2 text-white/40 hover:text-white transition-colors"
-              aria-label="Instagram"
-            >
-              <FiInstagram
-                size={20}
-                className="group-hover:scale-110 transition-transform"
-              />
-              <span className="text-sm">Instagram</span>
-            </a>
+              <a
+                href="https://www.instagram.com/lucas.feitosa121/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center gap-2 text-white/40 hover:text-white transition-colors"
+                aria-label="Instagram"
+              >
+                <FiInstagram size={20} className="group-hover:scale-110 transition-transform" />
+                <span className="text-sm">Instagram</span>
+              </a>
+            </div>
           </motion.div>
         </motion.div>
       </div>

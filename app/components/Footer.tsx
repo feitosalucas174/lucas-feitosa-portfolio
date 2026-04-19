@@ -74,7 +74,7 @@ export default function Footer() {
           </div>
 
           {/* Links sociais — ícones grandes */}
-          <div className="flex items-center gap-3">
+          <div className="flex flex-wrap items-center justify-center gap-3">
             {socialLinks.map((s) => (
               <a
                 key={s.label}
