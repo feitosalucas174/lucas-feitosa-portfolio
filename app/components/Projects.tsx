@@ -55,9 +55,9 @@ const projects: Project[] = [
     gradient: 'from-emerald-600/80 to-green-700/80',
     iconBg: 'from-emerald-500 to-green-600',
     icon: '🛒',
-    githubUrl: '#',
-    demoUrl: '#',
-    status: 'Em breve',
+    githubUrl: 'https://github.com/feitosalucas174/ecommerce-fullstack',
+    demoUrl: 'https://ecommerce-fullstack-nine-olive.vercel.app/',
+    status: 'Concluído',
   },
   {
     id: 4,
