@@ -77,13 +77,13 @@ const projects: Project[] = [
     title: 'Dashboard Analytics',
     description:
       'Painel de controle interativo com gráficos em tempo real, filtros avançados e relatórios exportáveis em PDF/Excel.',
-    tags: ['React', 'TypeScript', 'Node.js', 'MySQL'],
+    tags: ['React', 'TypeScript', 'Node.js', 'PostgreSQL'],
     gradient: 'from-pink-600/80 to-rose-700/80',
     iconBg: 'from-pink-500 to-rose-600',
     icon: '📊',
-    githubUrl: '#',
-    demoUrl: '#',
-    status: 'Em breve',
+    githubUrl: 'https://github.com/feitosalucas174/dashboard-analytics',
+    demoUrl: 'https://dashboard-analytics-mu-nine.vercel.app/',
+    status: 'Concluído',
   },
 ]
 
