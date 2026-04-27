@@ -42,9 +42,9 @@ const projects: Project[] = [
     gradient: 'from-blue-600/80 to-blue-700/80',
     iconBg: 'from-blue-500 to-blue-700',
     icon: '🔗',
-    githubUrl: '#',
-    demoUrl: '#',
-    status: 'Em breve',
+    githubUrl: 'https://github.com/feitosalucas174/api-rest-node',
+    demoUrl: 'https://api-rest-node-5mjb.onrender.com/api/docs/',
+    status: 'Concluído',
   },
   {
     id: 3,
