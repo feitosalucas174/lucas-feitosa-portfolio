@@ -1,0 +1,45 @@
+name: Keep Render Services Alive
+
+on:
+  schedule:
+    - cron: '*/10 * * * *'
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - name: chatbot-ia
+            url: https://chatbot-ia-mkmw.onrender.com
+            service_id: srv-d7i2nu3bc2fs73dnj9bg
+          - name: api-rest-node
+            url: https://api-rest-node-5mjb.onrender.com/api/docs/
+            service_id: srv-d7nca3jrjlhs73adlf2g
+          - name: dashboard-analytics
+            url: https://dashboard-analytics-5j2k.onrender.com/health
+            service_id: srv-d7mp31v7f7vs73fb5pa0
+          - name: shopfull-backend
+            url: https://shopfull-backend.onrender.com/api/products/
+            service_id: srv-d7ipa8hj2pic73b09mb0
+
+    steps:
+      - name: Ping ${{ matrix.name }}
+        id: ping
+        run: |
+          STATUS=$(curl -s -o /dev/null -w "%{http_code}" --max-time 30 "${{ matrix.url }}")
+          echo "status=$STATUS" >> $GITHUB_OUTPUT
+          echo "${{ matrix.name }}: HTTP $STATUS"
+
+      - name: Redeploy ${{ matrix.name }} se estiver fora
+        if: steps.ping.outputs.status != '200'
+        run: |
+          echo "⚠️  ${{ matrix.name }} retornou HTTP ${{ steps.ping.outputs.status }} — disparando redeploy..."
+          curl -s -X POST \
+            -H "Authorization: Bearer ${{ secrets.RENDER_API_KEY }}" \
+            -H "Content-Type: application/json" \
+            "https://api.render.com/v1/services/${{ matrix.service_id }}/deploys" \
+            -d '{"clearCache":"do_not_clear"}'
+          echo "✅ Redeploy solicitado para ${{ matrix.name }}"
